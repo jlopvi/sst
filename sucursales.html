@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <title>Document</title>
+</head>
+<body class="app">
+
+        <header class="headerApp">
+            <div class="headerApp-content wrapper">
+                <figure class="headerApp-logo">
+                    <img src="./public/img/logoGold.png" alt="" height="60">
+                </figure>
+                <nav class="headerApp-nav">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="#" class="menu-link">Servicios</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Sucursales</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">
+                            <i class="icon icon-phone"></i> Llamar</a>
+                            <div class="subMenu-auto">
+                                <ul class="subMenu-content">
+                                    <li class="subMenu-item">
+                                        <a href="tel:+5165382653"><span class="bgy"><i class="icon icon-phone"></i> (516) 538-2653</span> USA Hempstead</a>
+                                    </li>
+                                    <li class="subMenu-item">
+                                        <a href="tel:+6312314048"><span class="bgy"><i class="icon icon-phone"></i> (631) 231-4048</span> USA Brentwood</a>
+                                    </li>
+                                    <li class="subMenu-item">
+                                        <a href="tel:+50326458400"><span class="bgy"><i class="icon icon-phone"></i> (503) 2645-8400</span> El Salvador</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="menu-item"><a href="#" class="btn">Cotizar</a></li>
+
+
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <section class="heroApp small">
+
+            <div class="heroApp-content">
+                <img src="./public/img/bg1.jpg" alt="">
+            </div>
+
+        </section>
+        <div class="bodyApp">
+            <section class="mainApp u-diagonal-right">
+        <div class="mainApp-content wrapper">
+            <div>
+                <h2 class="title">
+                    Nuestras Sucursales
+                </h2>
+            </div>
+            <div class="location">
+                <ul class="location-menu">
+                    <li class="location-item active">
+                        <div class="location-title">Hempstead, New York</div>
+                        <div class="location-copy">
+                            <div><i class="icon icon-geo"></i>	<span class="address">43 W. Columbia St. Hempstead, NY 11550</span></div>
+                            <div><i class="icon icon-phone"></i>	516-538-2653</div>
+                            <div><i class="icon icon-file"></i>	516-538-2771</div>
+                        </div>
+
+                    </li>
+                    <li class="location-item">
+                        <div class="location-title">Brentwood, New York</div>
+                        <div class="location-copy">
+                            <div><i class="icon icon-geo"></i>	<span class="address">1114 Suffolk Ave. Brentwood, NY 11717</span></div>
+                            <div><i class="icon icon-phone"></i>	(631) 231-4048</div>
+                            <div><i class="icon icon-file"></i>	631-231-1979</div>
+                        </div>
+                    </li>
+                    <li class="location-item">
+                        <div class="location-title">Call Center, El Salvador</div>
+                        <div class="location-copy">
+                            <div><i class="icon icon-geo"></i>	<span class="address">Residencial Santa Teresa 21 Ave. Norte Pol H-2 #23 Merliot La Libertad, El Salvador</span></div>
+                            <div><i class="icon icon-phone"></i>	(503) 2645-8400</div>
+                            <div><i class="icon icon-file"></i>	Ninguno</div>
+                        </div>
+
+                    </li>
+                    <li class="location-item">
+                        <div class="location-title">San Miguel, El Salvador</div>
+                        <div class="location-copy">
+                            <div><i class="icon icon-geo"></i> Calle Panamericana Res. Ma Julia No. 61 San Miguel, El Salvador<span class="address hidden">Sortos Travel Services San Miguel, Calle Principal, San Miguel</span></div>
+                            <div><i class="icon icon-phone"></i>	(503) 2645-8400</div>
+                            <div><i class="icon icon-file"></i>	(503) 2667-8272</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="location-map">
+                    <div id="address-location" class="address"></div>
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+        </div>
+        <footer class="footerApp">
+            <div class="footerApp-content wrapper">
+                © Sortos Travel
+            </div>
+        </footer>
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+  </script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-0jRvks3JFpSgjhxVdZoeoMxoCRZVgtA&callback=initialize">
+  </script>
+  <script src="./public/js/app.js"></script>
+</body>
+</html>

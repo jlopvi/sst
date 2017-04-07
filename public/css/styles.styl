@@ -1,0 +1,555 @@
+@import 'nib'
+@import 'style.styl'
+body
+    background #EBEBEB
+    margin 0
+    padding 0
+    font-family: 'Roboto', sans-serif;
+    width 100vw
+    height 100vh
+    overflow-x hidden
+    overflow-y auto
+    visibility hidden
+.wrapper
+    max-width 1200px
+    min-width 320px
+    margin 0 auto
+    box-sizing border-box
+.app
+    display flex
+    flex-direction column
+    height 100vh
+.hidden
+    display none
+.bodyApp
+    flex 1 0 auto
+.location
+    background red
+    display flex
+    margin-top 10px
+    &-menu
+        background blue
+        width 20%
+        margin 0
+        padding 0
+        list-style none
+    &-item
+        background #F2F2F2
+        color #555
+        border 1px solid #D5D5D5
+        border-bottom none
+        cursor pointer
+        &:last-child
+            border-bottom 1px solid #D5D5D5
+        &.active
+            box-shadow inset 4px 0 0 0 #f1c40f
+
+    &-title
+        font-weight 700
+        line-height 30px
+        padding 0 10px
+    &-copy
+        padding 5px 10px
+        & > div
+            position relative
+            padding-left 18px
+            margin-bottom 5px
+            .icon
+                position absolute
+                left 0
+                font-size 1.2em
+        .btn-y
+            background #f1c40f
+            padding-top 5px
+            padding-bottom 5px
+            padding-right 5px
+
+
+
+    &-map
+        background #F2F2F2
+        flex-grow 1
+        display flex
+        flex-direction column
+        .map
+            flex-grow 1
+        .address
+            text-align center
+            line-height 30px
+            font-weight 700
+            font-size 1.2em
+            color #555
+
+.headerApp
+    background transparent
+    position absolute
+    top 0
+    left 0
+    width 100%
+    z-index 99
+    flex none
+
+
+    &-content
+        display flex
+        justify-content space-between
+        position relative
+        &:after
+            content ''
+            border 5px solid transparent
+            border-top none
+            border-bottom 1px solid rgba(#ffffff, 0.35)
+            position absolute
+            top 101%
+            left 0
+            right 0
+    &-logo
+        margin 0
+    &-nav
+        .menu
+            display flex
+            padding 0
+            list-style none
+            align-items center
+            margin 0
+            height 100%
+            &-item
+                position relative
+                &:hover
+                    .subMenu
+                        &-auto
+                            visibility visible
+                            transform translateX(-50%) scale(1)
+                            opacity 1
+
+
+            &-link
+
+                color rgba(white,.6)
+                display block
+                width 155px
+                text-align center
+                text-transform uppercase
+                padding 5px
+                text-decoration none
+                font-weight 700
+                letter-spacing 5px
+                font-size 14px
+                text-shadow 1px 1px rgba(black,0.6)
+                transition .3s
+                &:hover
+                    color rgba(white,.9)
+                    letter-spacing 3px
+
+            .icon
+                font-size 1.2em
+                vertical-align middle
+        .subMenu
+            &-auto
+                visibility hidden
+                background white
+                color #212121
+                position absolute
+                top 100%
+                left 50%
+                height 100%
+                transform translateX(-50%) scale(1.1)
+                opacity 0
+                min-width 250px
+                z-index 99
+                transition .3s
+            &-content
+                position absolute
+                padding 10px
+                list-style none
+                background white
+                &:before
+                    content ''
+                    border 7px solid transparent
+                    border-bottom 7px solid white
+                    position absolute
+                    bottom 100%
+                    left 50%
+                    transform translateX(-50%)
+
+            &-item
+                white-space nowrap
+                margin 4px 0
+                a
+                    color #212121
+                    text-decoration none
+                    line-height 30px
+                .bgy
+                    background #f1c40f
+                    display inline-block
+                    padding 4px
+                    color rgba(black,0.6)
+
+
+
+
+.heroApp
+    height 90vh
+    width 100%
+    position relative
+    overflow hidden
+    z-index 0
+    flex none
+    &.small
+        height 200px
+        width 100%
+        position relative
+        overflow hidden
+        z-index 0
+        pointer-events none
+    &:after
+        content ''
+        position absolute
+        top 0
+        bottom 0
+        right 0
+        left 0
+        background  rgba(black,0.5)
+        background-size 3px
+        z-index 2
+    &:hover
+        img
+            filter blur(2px)
+            transform scale(1.1)
+        .heroApp-copy
+            color rgba(white,.9)
+            .text
+                background rgba(black,0.6)
+                box-shadow 0 0 0 0 rgba(black, .7)
+    &-content
+        position relative
+        height 100%
+        width 100%
+        display flex
+        justify-content center
+        align-items center
+    &-copy
+        position relative
+        z-index 3
+        color rgba(white,.6)
+        font-size 3em
+        transition .3s
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        .text
+            background transparent
+            padding 5px
+            box-shadow 0 0 0 10px rgba(black, 0)
+            transition .3s
+        .btn
+            font-size 20px
+            padding 10px
+            border-radius 30px
+
+
+
+    img
+        width 100%
+        height 100%
+        object-fit cover
+        transition .5s ease
+        position absolute
+        z-index 1
+.btn
+    min-height 40px
+    display flex
+    align-items center
+    justify-content center
+    text-decoration none
+    background transparent
+    box-shadow inset 0 0 0 2px rgba(#f1c40f,0.6), 0 0 0 10px rgba(#f1c40f,0), inset 0 0 0 0 rgba(#f1c40f,0.6)
+    font-size 16px
+    text-transform uppercase
+    font-weight 700
+    color rgba(white,0.7)
+    min-width 150px
+    text-align center
+    border-radius 20px
+    transition all .3s
+    letter-spacing 4px
+    &:hover
+        box-shadow inset 0 0 0 2px rgba(#f1c40f,0.6), 0 0 0 0 rgba(#f1c40f, 0.8), inset 0px -80px 0 0 rgba(#f1c40f,0.6)
+        color rgba(black,0.6)
+.mainApp
+    &-content
+        background white
+        min-height 100px
+        position relative
+        top -100px
+        box-shadow 0 0 0 1px #ecf0f1
+        padding 10px
+        box-sizing border-box
+        .title
+            color #212121
+            margin 5px 0
+            display inline-block
+            position relative
+            font-weight 400
+            letter-spacing 4px
+            text-transform uppercase
+            padding 6px 10px
+            &:after
+                content ''
+                width 50%
+                position absolute
+                height 4px
+                background #f1c40f
+                left 0px
+                bottom 0px
+            &:before
+                content ''
+                width 4px
+                position absolute
+                height 50%
+                background #f1c40f
+                bottom 0
+                left 0
+        .services-group
+            display flex
+            justify-content center
+            flex-wrap wrap
+            .service
+                width 20%
+                min-width 150px
+                overflow hidden
+                position relative
+                margin 0
+                cursor pointer
+
+                &:after
+                    content ''
+                    display block
+                    padding-bottom 100%
+
+                &-img
+                    position absolute
+                    top 0
+                    left 0
+                    width 100%
+                    height 100%
+                    transition .3s
+
+                    img
+                        width 100%
+                        height 100%
+                        object-fit cover
+                &:hover
+                    .service-copy:before
+                    .service-content:before
+                        height 50%
+                    .service-copy:after
+                    .service-content:after
+                        width 50%
+                    .service-img
+                        width 105%
+                        height 105%
+                    .service-copy
+                        color white
+
+                &-copy
+                &-content
+                    position absolute
+                    top 0
+                    left 0
+                    width 100%
+                    height 100%
+                    box-shadow inset 0 0 0 4px white
+                    padding 6px
+                    box-sizing border-box
+
+                    color rgba(white,0.8)
+                &-content
+                    background rgba(black, 0.5)
+                    &:after
+                    &:before
+                        content ''
+                        bottom 9px
+                        background #f1c40f
+                        left 9px
+                        transition all .3s
+                        position absolute
+                        z-index 99
+                    &:before
+                        width 4px
+                        height 0
+                    &:after
+                        width 0
+                        height 4px
+                &-copy
+                    display flex
+                    justify-content center
+                    align-items center
+                    transition color .3s
+                    text-align center
+                    &:after
+                    &:before
+                        content ''
+                        background #f1c40f
+                        top 9px
+                        right 9px
+                        transition all .3s
+                        position absolute
+                        z-index 99
+                    &:before
+                        width 4px
+                        height 0
+                    &:after
+                        width 0
+                        height 4px
+                &-title
+                    text-transform uppercase
+                    letter-spacing 4px
+                    font-size 20px
+                    box-sizing border-box
+                    padding 0 10px
+
+.section
+    width 100%
+    min-height 500px
+    position relative
+    border-bottom 30px solid #EBEBEB
+
+    &:after
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background rgba(black,0.4)
+        z-index 1
+    &.left
+        justify-content flex-star
+    &-content
+        position relative
+        height 100%
+        display flex
+        justify-content center
+        align-items center
+        &.right
+            justify-content flex-end
+        &.left
+            justify-content flex-start
+
+    &-copy
+        position absolute
+        top -70px
+        width 45%
+        background white
+        padding 10px
+        box-sizing border-box
+        z-index 2
+        box-shadow 0px 3px 2px 2px rgba(black, 0.3)
+        &.right
+            right 0
+        &.left
+            left 0
+        .title
+            color #212121
+            margin  0
+            display inline-block
+            position relative
+            font-weight 400
+            letter-spacing 4px
+            text-transform uppercase
+            padding 6px 10px
+            &:after
+                content ''
+                width 50%
+                position absolute
+                height 4px
+                background #f1c40f
+                left 0px
+                bottom 0px
+            &:before
+                content ''
+                width 4px
+                position absolute
+                height 50%
+                background #f1c40f
+                bottom 0
+                left 0
+    &-brand
+        z-index 2
+        width 40%
+        text-align center
+        .slogan
+            text-align center
+            color rgba(white,0.8)
+            font-weight 300
+            font-size 2em
+            letter-spacing 3px
+            text-shadow 1px 1px 2px black
+        .btn
+            width 200px
+            margin 5px auto
+    &-list
+        padding-left 20px
+        list-style none
+        &-item
+            font-size 16px
+            line-height 40px
+            letter-spacing 3px
+            color #555
+            position relative
+            padding-left 30px
+            &:before
+                content '\2713'
+                font-weight bold
+                color white
+                display inline-block
+                width 25px
+                left 0
+                top 5px
+                line-height 25px
+                text-align center
+                background #34495e
+                border-radius 50%
+                position absolute
+
+.footerApp
+    background #212121
+    height 40px
+    color white
+    letter-spacing 3px
+    flex none
+
+
+
+
+
+
+.u-diagonal
+    &-right
+        position relative
+        z-index 9
+        &:before
+            content ''
+            width 102%
+            top -50px
+            left 0
+            height 100px
+            background: #EBEBEB;
+            position absolute
+            transform: rotate(-2deg);
+            z-index -1;
+    &-left
+        position relative
+        z-index 9
+        &:before
+            content ''
+            width 102%
+            top -50px
+            left 0
+            height 100px
+            background: #EBEBEB;
+            position absolute
+            transform: rotate(2deg);
+            z-index -1;
