@@ -470,6 +470,7 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  text-align: center;
 }
 .heroApp-copy .text {
   background: transparent;
@@ -1050,5 +1051,8 @@ body {
   }
   .headerApp-nav .menu .btn {
     color: #555;
+  }
+  .heroApp {
+    height: 100vh;
   }
 }
