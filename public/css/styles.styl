@@ -88,12 +88,14 @@ body
     width 100%
     z-index 99
     flex none
-
+    .hmenubtn
+        display none
 
     &-content
         display flex
         justify-content space-between
         position relative
+        align-items center
         &:after
             content ''
             border 5px solid transparent
@@ -555,20 +557,45 @@ body
             z-index -1;
 @media (max-width: 800px)
     .headerApp
-
+        .hmenubtn
+            color white
+            background #f1c40f
+            line-height 40px
+            width 40px
+            text-align center
+            display inline-block
+            flex none
+            height 40px
+            font-size 20px
+            
+            &.close
+                position absolute
+                right 0px
+                top 15px
+                color #555
+                background transparent
+                font-size 2em
+        #showmenu[type="checkbox"]:checked + .headerApp-nav
+            left 0
         &-logo
             margin 0
         &-nav
+            background rgba(white, 1)
+            position fixed
+            top 0
+            left 100%
+            right 0
+            bottom 0
+            transition .3s
+            z-index 99
+
             .menu
                 display flex
                 flex-direction column
                 justify-content center
-                background rgba(white, 1)
-                position fixed
-                top 0
-                left 0
-                right 0
-                bottom 0
+                position relative
+                width 100%
+                overflow-x hidden
                 &-item
                     position relative
                     text-align center
@@ -593,6 +620,7 @@ body
                     border-bottom 2px solid #f1c40f
                     padding 0
                     text-shadow none
+                    white-space nowrap
                     &:hover
                         color #555
                 .btn
