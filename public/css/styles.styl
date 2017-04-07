@@ -553,3 +553,47 @@ body
             position absolute
             transform: rotate(2deg);
             z-index -1;
+@media (max-width: 800px)
+    .headerApp
+
+        &-logo
+            margin 0
+        &-nav
+            .menu
+                display flex
+                flex-direction column
+                justify-content center
+                background rgba(white, 1)
+                position fixed
+                top 0
+                left 0
+                right 0
+                bottom 0
+                &-item
+                    position relative
+                    text-align center
+                    display block
+                    margin 10px
+                    &:hover
+                        .subMenu
+                            &-auto
+                                visibility visible
+                                transform translateX(-50%) scale(1)
+                                opacity 1
+
+
+                &-link
+
+                    color #555
+                    text-transform uppercase
+                    font-size 20px
+                    line-height 40px
+                    width 100%
+                    max-width 250px
+                    border-bottom 2px solid #f1c40f
+                    padding 0
+                    text-shadow none
+                    &:hover
+                        color #555
+                .btn
+                    color #555
