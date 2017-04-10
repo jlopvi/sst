@@ -5,7 +5,7 @@ body
     margin 0
     padding 0
     font-family: 'Roboto', sans-serif;
-    width 100vw
+    width 100%
     height 100vh
     overflow-x hidden
     overflow-y auto
@@ -261,6 +261,8 @@ body
         position absolute
         z-index 1
 .btn
+    cursor pointer
+    border none
     min-height 40px
     display flex
     align-items center
@@ -280,6 +282,9 @@ body
     &:hover
         box-shadow inset 0 0 0 2px rgba(#f1c40f,0.6), 0 0 0 0 rgba(#f1c40f, 0.8), inset 0px -80px 0 0 rgba(#f1c40f,0.6)
         color rgba(black,0.6)
+    &:focus
+    &:active
+        outline none
 .mainApp
     &-content
         background white
@@ -289,6 +294,42 @@ body
         box-shadow 0 0 0 1px #ecf0f1
         padding 10px
         box-sizing border-box
+        &.small
+            max-width 800px
+        .form
+            margin-top 20px
+            display flex
+            flex-wrap wrap
+            &-section
+                margin 4px
+                width 40%
+                flex-grow 1
+                display flex
+                min-width 300px
+                &.block
+                    width 100%
+                    flex-wrap wrap
+            &-input
+                flex-grow 1
+                min-height 40px
+                line-height 40px
+            &-label
+                min-width 38px
+                padding 0 4px
+                line-height 40px
+                background #34495E
+                color white
+                text-align center
+            &-textarea
+                flex none
+                width calc( 100% - 8px)
+                display block
+
+            .btn
+                color rgba(black,0.6)
+                padding-left 10px
+                padding-right 10px
+                margin 0 auto
         .title
             color #212121
             margin 5px 0
@@ -320,7 +361,7 @@ body
             flex-wrap wrap
             .service
                 width 20%
-                min-width 150px
+                min-width 195px
                 overflow hidden
                 position relative
                 margin 0
@@ -556,7 +597,48 @@ body
             position absolute
             transform: rotate(2deg);
             z-index -1;
+@media (max-width: 900px)
+    .heroApp
+        height 80vh
+        &.small
+            height 100px
+    .mainApp
+        &:before
+            display none
+        &-content
+            position static
+            .services-group
+                flex-direction column
+                .service
+                    width 100%
+                    &:after
+                        padding-bottom 100px
+    .location
+        &-menu
+            width 40%
+    .section
+        height auto !important
+        min-height auto
+        &-content
+            flex-direction column
+            &.left
+            &.right
+                justify-content flex-star
+        &-copy
+            width 100%
+            position static
+            order 1
+        &-brand
+            order 2
+            width 80%
+            margin-top 20px
+            margin-bottom 20px
+
+
 @media (max-width: 800px)
+    .location
+        &-menu
+            width 50%
     .headerApp
         .hmenubtn
             color white
@@ -628,3 +710,6 @@ body
                     color #555
     .heroApp
         height 100vh
+        pointer-events none
+        .btn
+            pointer-events all

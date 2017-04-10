@@ -55,55 +55,43 @@
         </section>
         <div class="bodyApp">
             <section class="mainApp u-diagonal-right">
-        <div class="mainApp-content wrapper">
+        <div class="mainApp-content small wrapper">
             <div>
                 <h2 class="title">
-                    Nuestras Sucursales
+                    Contactenos
                 </h2>
             </div>
-            <div class="location">
-                <ul class="location-menu">
-                    <li class="location-item active">
-                        <div class="location-title">Hempstead, New York</div>
-                        <div class="location-copy">
-                            <div><i class="icon icon-geo"></i>	<span class="address">43 W. Columbia St. Hempstead, NY 11550</span></div>
-                            <div><i class="icon icon-phone"></i>	516-538-2653</div>
-                            <div><i class="icon icon-file"></i>	516-538-2771</div>
-                        </div>
-
-                    </li>
-                    <li class="location-item">
-                        <div class="location-title">Brentwood, New York</div>
-                        <div class="location-copy">
-                            <div><i class="icon icon-geo"></i>	<span class="address">1114 Suffolk Ave. Brentwood, NY 11717</span></div>
-                            <div><i class="icon icon-phone"></i>	(631) 231-4048</div>
-                            <div><i class="icon icon-file"></i>	631-231-1979</div>
-                        </div>
-                    </li>
-                    <li class="location-item">
-                        <div class="location-title">Call Center, El Salvador</div>
-                        <div class="location-copy">
-                            <div><i class="icon icon-geo"></i>	<span class="address">Residencial Santa Teresa 21 Ave. Norte Pol H-2 #23 Merliot La Libertad, El Salvador</span></div>
-                            <div><i class="icon icon-phone"></i>	(503) 2645-8400</div>
-                            <div><i class="icon icon-file"></i>	Ninguno</div>
-                        </div>
-
-                    </li>
-                    <li class="location-item">
-                        <div class="location-title">San Miguel, El Salvador</div>
-                        <div class="location-copy">
-                            <div><i class="icon icon-geo"></i> Calle Panamericana Res. Ma Julia No. 61 San Miguel, El Salvador<span class="address hidden">Sortos Travel Services San Miguel, Calle Principal, San Miguel</span></div>
-                            <div><i class="icon icon-phone"></i>	(503) 2645-8400</div>
-                            <div><i class="icon icon-file"></i>	(503) 2667-8272</div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="location-map">
-                    <div id="address-location" class="address"></div>
-                    <div id="map" class="map"></div>
+            <section class="form">
+                <div class="form-section">
+                    <label class="form-label" for="name"><i>U</i></label><input id="name" name="name" class="form-input" placeholder="Nombre"></input>
                 </div>
-            </div>
+                <div class="form-section">
+                    <label class="form-label" for="phone"><i>T</i></label><input id="phone" name="phone" class="form-input" placeholder="Telefono"></input>
+                </div>
+                <div class="form-section">
+                    <label class="form-label" for="email"><i>E</i></label><input id="email" name="email" class="form-input" placeholder="Email"></input>
+                </div>
+                <div class="form-section">
+                    <select id="type" name="type" class="form-input" placeholder="Email">
+                        <option value="" selected="true" disabled="disabled">Seleccione Servicio</option>
+                        <option value="1">Viajes</option>
+                        <option value="2">Notario El Salvador</option>
+                        <option value="3">Notario Estados Unidos</option>
+                        <option value="4">Servicio Corporartivo</option>
+                        <option value="4">Otros</option>
+                    </select>
+                </div>
+                <div class="form-section block">
+                    <label class="form-label" for="message">Mensaje</label>
+                    <textarea class="form-textarea" id="message" name="message" rows="8" cols="80"></textarea>
+                </div>
+                <div class="form-section">
+                    <button class="btn" type="button" name="button">
+                        Enviar Mensaje
+                    </button>
+                 </div>
 
+            </section>
         </div>
     </section>
         </div>
