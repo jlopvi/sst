@@ -13,7 +13,7 @@
     <header class="headerApp">
         <div class="headerApp-content wrapper">
             <figure class="headerApp-logo">
-                <img src="./public/img/logoGold.png" alt="" height="60">
+                <img src="./public/img/logoGold.png" alt="" height="90">
             </figure>
             <label for="showmenu" class="hmenubtn"><i class="icon-menu"></i></label>
             <input class="hidden" type="checkbox" id="showmenu">
@@ -63,16 +63,16 @@
             </div>
             <section class="form">
                 <div class="form-section">
-                    <label class="form-label" for="name"><i>U</i></label><input id="name" name="name" class="form-input" placeholder="Nombre"></input>
+                    <label class="form-label" for="name"><i class="icon-user"></i></label><input id="name" name="name" class="form-input" placeholder="Nombre" required></input>
                 </div>
                 <div class="form-section">
-                    <label class="form-label" for="phone"><i>T</i></label><input id="phone" name="phone" class="form-input" placeholder="Telefono"></input>
+                    <label class="form-label" for="phone"><i class="icon icon-phone"></i></label><input id="phone" type="tel" name="phone" class="form-input" placeholder="Telefono" required></input>
                 </div>
                 <div class="form-section">
-                    <label class="form-label" for="email"><i>E</i></label><input id="email" name="email" class="form-input" placeholder="Email"></input>
+                    <label class="form-label" for="email"><i class="icon icon-mail"></i></label><input id="email" type="email" name="email" class="form-input" placeholder="Email" required></input>
                 </div>
                 <div class="form-section">
-                    <select id="type" name="type" class="form-input" placeholder="Email">
+                    <select id="type" name="type" class="form-input" placeholder="Email" required>
                         <option value="" selected="true" disabled="disabled">Seleccione Servicio</option>
                         <option value="1">Viajes</option>
                         <option value="2">Notario El Salvador</option>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="form-section block">
                     <label class="form-label" for="message">Mensaje</label>
-                    <textarea class="form-textarea" id="message" name="message" rows="8" cols="80"></textarea>
+                    <textarea class="form-textarea" id="message" name="message" rows="8" cols="80" required></textarea>
                 </div>
                 <div class="form-section">
                     <button class="btn" type="button" name="button">

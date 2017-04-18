@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?8yxfvd");
-  src: url("fonts/icomoon.eot?8yxfvd#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?8yxfvd") format('truetype'), url("fonts/icomoon.woff?8yxfvd") format('woff'), url("fonts/icomoon.svg?8yxfvd#icomoon") format('svg');
+  src: url("fonts/icomoon.eot?c6idyq");
+  src: url("fonts/icomoon.eot?c6idyq#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?c6idyq") format('truetype'), url("fonts/icomoon.woff?c6idyq") format('woff'), url("fonts/icomoon.svg?c6idyq#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -36,6 +36,9 @@
 }
 .icon-menu:before {
   content: "\e5d2";
+}
+.icon-user:before {
+  content: "\e7fd";
 }
 .icon-search2:before {
   content: "\e8b6";
@@ -219,12 +222,12 @@ body {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -o-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
   position: relative;
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -232,6 +235,7 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  height: 60px;
 }
 .headerApp-content:after {
   content: '';
@@ -240,11 +244,14 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.35);
   position: absolute;
   top: 101%;
-  left: 0;
+  left: 215px;
   right: 0;
 }
 .headerApp-logo {
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .headerApp-nav .menu {
   display: -webkit-box;
@@ -620,7 +627,7 @@ body {
 .mainApp-content .form-label {
   min-width: 38px;
   padding: 0 4px;
-  line-height: 40px;
+  line-height: 46px;
   background: #34495e;
   color: #fff;
   text-align: center;

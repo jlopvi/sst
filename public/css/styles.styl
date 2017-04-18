@@ -93,9 +93,10 @@ body
 
     &-content
         display flex
-        justify-content space-between
+        justify-content flex-end
         position relative
         align-items center
+        height 60px
         &:after
             content ''
             border 5px solid transparent
@@ -103,10 +104,14 @@ body
             border-bottom 1px solid rgba(#ffffff, 0.35)
             position absolute
             top 101%
-            left 0
+            left 215px
             right 0
     &-logo
         margin 0
+        position absolute
+        top 0
+        left 0
+
     &-nav
         .menu
             display flex
@@ -309,6 +314,7 @@ body
                 &.block
                     width 100%
                     flex-wrap wrap
+
             &-input
                 flex-grow 1
                 min-height 40px
@@ -316,7 +322,7 @@ body
             &-label
                 min-width 38px
                 padding 0 4px
-                line-height 40px
+                line-height 46px
                 background #34495E
                 color white
                 text-align center
